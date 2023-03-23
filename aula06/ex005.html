@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primeiros passos com DOM</title>
+    <style>
+        body{
+            font: normal 1em sans-serif;
+
+            color: hsl(0, 0%, 100%);
+            background-color: hsl(187, 100%, 50%);
+
+            text-shadow: 0 0 5px hsla(0, 0%, 0%,0.15);
+        }
+    </style>
+</head>
+<body>
+    <h1>Iniciando estudos DOM</h1>
+
+    <p>Aqui vai o resultado</p>
+    <p>Aprendendo a usar <strong>DOM</strong> em JavaScript</p>
+    <div>Clique em mim</div>
+
+    <button type="button">Clique aqui também</button>
+
+    <script>
+        var paragraph = window.document.getElementsByTagName('p')[0]
+        var p2 = document.getElementsByTagName('p')[1]
+
+        paragraph.innerText = 'Aloha'
+
+        paragraph.style.color = 'black'
+
+        document.write(p2.innerHTML)
+
+        function onClick() {
+            console.log('você pressionou o botão! 0o0')
+        }
+
+        const btn = document.getElementsByTagName('button')
+
+        btn[0].addEventListener('click', onClick)
+   </script>
+</body>
+</html>

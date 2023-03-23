@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Somando Valores</title>
+    <style>
+        body{
+            font: normal 1em sans-serif;
+        }
+
+        input{
+            background-color: hsl(0, 0%, 90%);
+
+            border: 2px solid black;
+            border-radius: 50px;
+
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: bold;
+        }
+
+        p#resultado{
+            display: inline-block;
+            width: 100px;
+            height: 30px;
+            background-color: hsl(86, 50%, 70%);
+
+            border-radius: 50px;
+
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>Somando Valores</h1>
+
+    <div>
+        <input id="valor1" type="number">
+        <input id="valor2" type="number">
+        <button id="botão-somar">SOMAR</button>
+    </div>
+
+    <p id="resultado"></p>
+
+    <script>
+        const valor1 = document.getElementById('valor1')
+        const valor2 = document.getElementById('valor2')
+        const botaoSomar = document.getElementById('botão-somar')
+        const resultado = document.getElementById('resultado')
+
+        function somar(){
+            console.log('clicou!')
+            resultado.innerText = Number(valor1.value) + Number(valor2.value)
+        }
+
+        botaoSomar.addEventListener("click",somar)
+    </script>
+</body>
+</html>
